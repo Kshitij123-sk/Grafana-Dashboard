@@ -1,0 +1,10 @@
+[Unit]
+Description=My Nginx Web Server
+
+[Container]
+Image=docker.io/library/nginx:latest
+PublishPort=8080:80
+Volume=/home/kshitij/webdata:/usr/share/nginx/html:Z
+
+[Install]
+WantedBy=multi-user.target
