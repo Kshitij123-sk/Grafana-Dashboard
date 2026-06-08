@@ -35,7 +35,7 @@ See [docs/setup-guide.md](docs/setup-guide.md) for full installation steps.
 
 ## Screenshots
 
-![Dashboard](screenshots/Grafana-Dashboard.png)
+![Dashboard](screenshots/Grafana-Dashboard.png,Windows-Dashboard.png)
 
 ## Key Configs
 
