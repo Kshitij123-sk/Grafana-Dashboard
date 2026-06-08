@@ -34,8 +34,9 @@ Windows Host (localhost)
 See [docs/setup-guide.md](docs/setup-guide.md) for full installation steps.
 
 ## Screenshots
-
+Linux Dashboard
 ![Dashboard](screenshots/Grafana-Dashboard.png)
+Windows Dashboard
 ![Dashboard](screenshots/Windows-Dashboard.png)
 
 ## Key Configs
