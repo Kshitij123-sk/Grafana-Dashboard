@@ -14,11 +14,11 @@ Windows Exporter  Windows host metrics              9182
 
 Architecture:
 
-  Windows 11 Host (192.168.0.105)
+  Windows 11 Host (Windows IP)
       └── windows_exporter :9182
               │
               ▼
-  RHEL 10 VM - rhel10-srv (192.168.8.100)
+  RHEL 10 VM - rhel10-srv (VM IP)
       ├── Prometheus :9091  <-- scrapes both exporters
       ├── Node Exporter :9100
       └── Grafana :3000  <-- queries Prometheus
@@ -52,7 +52,7 @@ STEP 1 - INSTALL PROMETHEUS
 
      - job_name: 'windows_exporter'
        static_configs:
-         - targets: ['192.168.0.105:9182']
+         - targets: ['windows IP:9182']
 
    NOTE: Job name must match exactly what you select in Grafana dashboard
          variable dropdowns later.
@@ -144,7 +144,7 @@ STEP 3 - INSTALL WINDOWS EXPORTER (Windows 11 host)
 
 5. Verify from your RHEL VM that it can reach the Windows exporter:
 
-   curl http://192.168.0.105:9182/metrics | head -20
+   curl http://windows:9182/metrics | head -20
 
 
 
@@ -169,7 +169,7 @@ STEP 4 - INSTALL GRAFANA
    sudo systemctl enable --now grafana-server
 
 3. Access Grafana in your browser:
-   http://192.168.8.100:3000
+   http://VM IP:3000
    Default login: admin / admin
 
 4. Add Prometheus as data source:
