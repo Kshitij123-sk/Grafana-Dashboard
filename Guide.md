@@ -24,7 +24,7 @@ Architecture:
       └── Grafana :3000  <-- queries Prometheus
 
 
-===============================
+
 STEP 1 - INSTALL PROMETHEUS
 ===============================
 
@@ -87,7 +87,7 @@ STEP 1 - INSTALL PROMETHEUS
    curl http://localhost:9091/-/healthy
 
 
-===============================
+
 STEP 2 - INSTALL NODE EXPORTER (RHEL 10 host metrics)
 ===============================
 
@@ -125,7 +125,7 @@ STEP 2 - INSTALL NODE EXPORTER (RHEL 10 host metrics)
    curl http://localhost:9100/metrics | head -20
 
 
-===============================
+
 STEP 3 - INSTALL WINDOWS EXPORTER (Windows 11 host)
 ===============================
 
@@ -147,7 +147,7 @@ STEP 3 - INSTALL WINDOWS EXPORTER (Windows 11 host)
    curl http://192.168.0.105:9182/metrics | head -20
 
 
-===============================
+
 STEP 4 - INSTALL GRAFANA
 ===============================
 
@@ -179,7 +179,7 @@ STEP 4 - INSTALL GRAFANA
    - Click Save & Test
 
 
-===============================
+
 STEP 5 - IMPORT DASHBOARDS IN GRAFANA
 ===============================
 
@@ -194,7 +194,7 @@ of the dashboard:
    - For Windows panels: select windows_exporter
 
 
-===============================
+
 TROUBLESHOOTING
 ===============================
 
@@ -239,7 +239,7 @@ CPU usage:
    100 - (avg by (instance) (rate(windows_cpu_time_total{mode="idle",instance="$instance"}[5m])) * 100)
 
 
-===============================
+
 ENVIRONMENT DETAILS
 ===============================
 
