@@ -47,4 +47,4 @@ See [docs/setup-guide.md](docs/setup-guide.md) for full installation steps.
 
 - OS: Red Hat Enterprise Linux 10
 - Hypervisor: VMware Workstation
-- Host: rhel10-srv | IP: 192.168.8.100
+- Host: rhel10-srv | IP: VM IP
