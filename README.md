@@ -5,11 +5,11 @@ Node Exporter, and Grafana — monitoring both Linux VM and Windows host.
 
 ## Architecture
 rhel10-srv (localhost)
-├── Node Exporter  :9100  → Linux metrics
-├── Prometheus     :9091  → Scrapes & stores metrics
-└── Grafana        :3000  → Dashboards & visualization
+- Node Exporter  :9100  → Linux metrics
+- Prometheus     :9091  → Scrapes & stores metrics
+- Grafana        :3000  → Dashboards & visualization
 Windows Host (localhost)
-└── windows_exporter :9182 → Windows metrics
+- windows_exporter :9182 → Windows metrics
 
 ## Stack
 
