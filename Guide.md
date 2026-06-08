@@ -15,13 +15,13 @@ Windows Exporter  Windows host metrics              9182
 Architecture:
 
   Windows 11 Host (Windows IP)
-      └── windows_exporter :9182
-              │
-              ▼
+      - windows_exporter :9182
+              |
+              
   RHEL 10 VM - rhel10-srv (VM IP)
-      ├── Prometheus :9091  <-- scrapes both exporters
-      ├── Node Exporter :9100
-      └── Grafana :3000  <-- queries Prometheus
+      - Prometheus :9091  <-- scrapes both exporters
+      - Node Exporter :9100
+      - Grafana :3000  <-- queries Prometheus
 
 
 
