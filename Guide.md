@@ -1,8 +1,8 @@
 # Home Lab Monitoring Stack - Setup Guide
 
-=====================================================================
+===============================
 STACK OVERVIEW
-=====================================================================
+===============================
 
 Component         Role                              Port
 ---------         ----                              ----
@@ -24,9 +24,9 @@ Architecture:
       └── Grafana :3000  <-- queries Prometheus
 
 
-=====================================================================
+===============================
 STEP 1 - INSTALL PROMETHEUS
-=====================================================================
+===============================
 
 1. Download and extract Prometheus:
 
@@ -87,9 +87,9 @@ STEP 1 - INSTALL PROMETHEUS
    curl http://localhost:9091/-/healthy
 
 
-=====================================================================
+===============================
 STEP 2 - INSTALL NODE EXPORTER (RHEL 10 host metrics)
-=====================================================================
+===============================
 
 1. Download and extract:
 
@@ -125,9 +125,9 @@ STEP 2 - INSTALL NODE EXPORTER (RHEL 10 host metrics)
    curl http://localhost:9100/metrics | head -20
 
 
-=====================================================================
+===============================
 STEP 3 - INSTALL WINDOWS EXPORTER (Windows 11 host)
-=====================================================================
+===============================
 
 1. Download the latest .msi installer from:
    https://github.com/prometheus-community/windows_exporter/releases
@@ -147,9 +147,9 @@ STEP 3 - INSTALL WINDOWS EXPORTER (Windows 11 host)
    curl http://192.168.0.105:9182/metrics | head -20
 
 
-=====================================================================
+===============================
 STEP 4 - INSTALL GRAFANA
-=====================================================================
+===============================
 
 1. Add Grafana repository:
 
@@ -179,9 +179,9 @@ STEP 4 - INSTALL GRAFANA
    - Click Save & Test
 
 
-=====================================================================
+===============================
 STEP 5 - IMPORT DASHBOARDS IN GRAFANA
-=====================================================================
+===============================
 
 Go to Dashboards > Import and use these Grafana dashboard IDs:
 
@@ -194,9 +194,9 @@ of the dashboard:
    - For Windows panels: select windows_exporter
 
 
-=====================================================================
+===============================
 TROUBLESHOOTING
-=====================================================================
+===============================
 
 --- Check if scrape targets are UP ---
 
@@ -239,16 +239,14 @@ CPU usage:
    100 - (avg by (instance) (rate(windows_cpu_time_total{mode="idle",instance="$instance"}[5m])) * 100)
 
 
-=====================================================================
+===============================
 ENVIRONMENT DETAILS
-=====================================================================
+===============================
 
 Monitoring VM  : RHEL 10 (rhel10-srv)
                : VMware Workstation
-               : Static IP 192.168.8.100
 
 Windows Host   : Windows 11 Home
-               : IP 192.168.0.105
                : windows_exporter on port 9182
 
 Prometheus     : Port 9091 (non-default, conflict with websm on 9090)
