@@ -1,8 +1,8 @@
 # Home Lab Monitoring Stack - Setup Guide
 
-===============================
+================
 STACK OVERVIEW
-===============================
+================
 
 Component         Role                              Port
 ---------         ----                              ----
